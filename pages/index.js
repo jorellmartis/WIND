@@ -18,22 +18,6 @@ export default function Home({homePageData}) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <FullBlockRender blocks={homePageData}/>
-       {/* Home Page Section 3 */}
-      <section id='home-flexible-service'>
-        <HomeFlexibleService/>
-      </section>
-        {/* Home Page Section 4 */}
-        <section id='home-popular-destinations'>
-        <HomePopularDestinations/>
-      </section>
-        {/* Home Page Section 5 */}
-        <section id='home-flight-manager'>
-        <HomeFlightManager/>
-      </section>
-         {/* Home Page Section 6 */}
-      <section id='home-book-flight'>
-        <HomeBookFlight/>
-      </section>
     </>
   )
 }

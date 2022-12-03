@@ -17,12 +17,14 @@ flex-direction: column-reverse;
         color: #8E8E95;
     }
 `
-const HomeBookFlight = () => {
+const HomeBookFlight = ({homeBookFlightData}) => {
   return (
+    <section id='home-book-flight'>
     <HomeBookFlightContent>
-        <h2>Book a flight</h2>
-        <span>What are you waiting for?</span>
+        <h2>{homeBookFlightData?.title}</h2>
+        <span>{homeBookFlightData?.description}</span>
     </HomeBookFlightContent>
+    </section>
   )
 }
 

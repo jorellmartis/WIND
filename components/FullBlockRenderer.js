@@ -1,10 +1,15 @@
 import React from 'react'
 import ComponentWebsiteBlocksHomeBanner from './blocks/homepage/ComponentWebsiteBlocksHomeBanner'
 import ComponentWebsiteBlocksHomePage from './blocks/homepage/ComponentWebsiteBlocksHomePage'
+import ComponentWebsiteBlocksHomeFlexibleService from './blocks/homepage/ComponentWebsiteBlocksHomeFlexibleService'
+import ComponentWebsiteBlocksHomeDestinations from './blocks/homepage/ComponentWebsiteBlocksHomeDestinations'
+import ComponentWebsiteBlocksHomeFlightManager from './blocks/homepage/ComponentWebsiteBlocksHomeFlightManager'
+import ComponentWebsiteBlocksHomeBookFlight from './blocks/homepage/ComponentWebsiteBlocksHomeBookFlight'
 const FullBlockRender = ({blocks}) => {
     console.log(blocks ,"full block data")
     const getComponent = (block , index ) => {
-        switch (block.__typename) {
+        switch (block?.__typename) {
+            //HOMEPAGE BLOCKS//
             case "ComponentWebsiteBlocksHomeBanner":
                 return <ComponentWebsiteBlocksHomeBanner
                     compBlockData={block}
@@ -13,6 +18,30 @@ const FullBlockRender = ({blocks}) => {
                 break;
             case "ComponentWebsiteBlocksHomePage":
                 return <ComponentWebsiteBlocksHomePage
+                    compBlockData={block}
+                    key = {`section-block-${index}`}
+                    />
+                    break;
+            case "ComponentWebsiteBlocksHomeFlexibleService":
+                return <ComponentWebsiteBlocksHomeFlexibleService
+                    compBlockData={block}
+                    key = {`section-block-${index}`}
+                    />
+                    break;
+            case "ComponentWebsiteBlocksHomeDestinations":
+                return <ComponentWebsiteBlocksHomeDestinations
+                    compBlockData={block}
+                    key = {`section-block-${index}`}
+                    />
+                    break;
+            case "ComponentWebsiteBlocksHomeFlightManager":
+                return <ComponentWebsiteBlocksHomeFlightManager
+                    compBlockData={block}
+                    key = {`section-block-${index}`}
+                    />
+                    break;
+            case "ComponentWebsiteBlocksHomeBookFlight":
+                return <ComponentWebsiteBlocksHomeBookFlight
                     compBlockData={block}
                     key = {`section-block-${index}`}
                     />

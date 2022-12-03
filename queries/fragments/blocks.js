@@ -18,3 +18,31 @@ export const ComponentWebsiteBlocksHomePage = `
     }
 }
 `
+export const ComponentWebsiteBlocksHomeFlexibleService = `
+...on ComponentWebsiteBlocksHomeFlexibleService{
+    __typename
+    txtLeftUpper
+    txtLeftLower
+}
+`
+export const ComponentWebsiteBlocksHomeDestinations = `
+...on ComponentWebsiteBlocksHomeDestinations{
+    __typename
+    title
+}
+`
+export const ComponentWebsiteBlocksHomeFlightManager = `
+...on ComponentWebsiteBlocksHomeFlightManager{
+    __typename
+    title
+    description
+}
+`
+export const ComponentWebsiteBlocksHomeBookFlight = `
+...on ComponentWebsiteBlocksHomeBookFlight{
+    __typename
+    title
+    description
+}
+`
+

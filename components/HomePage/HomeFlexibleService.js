@@ -32,15 +32,16 @@ color: white;
         text-align: center;
     }
 `
-const HomeFlexibleService = () => {
+const HomeFlexibleService = ({homeFlexibleServiceData}) => {
   return (
+    <section id='home-flexible-service'>
     <FlexibleServiceContent>
         <FlexibleServiceContentColumn>
             <div>
-            <h2>Flexible Services</h2>
+            <h2>{homeFlexibleServiceData?.txtLeftUpper}</h2>
             </div>
             <div>
-            <h3>Smart solutions for all your charter requirements</h3>
+            <h3>{homeFlexibleServiceData?.txtLeftLower}</h3>
             <button>All Solutions</button>
             </div>
         </FlexibleServiceContentColumn>
@@ -49,6 +50,8 @@ const HomeFlexibleService = () => {
             
         </FlexibleServiceContentColumn>
     </FlexibleServiceContent>
+    </section>
+
   )
 }
 

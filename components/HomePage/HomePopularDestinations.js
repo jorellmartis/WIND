@@ -17,14 +17,16 @@ height: 75%;
         object-fit: contain;
     }
 `
-const HomePopularDestinations = () => {
+const HomePopularDestinations = ({homePopularDestinationsData}) => {
   return (
+    <section id='home-popular-destinations'>
     <HomePopularDestinationsContent>
-    <h2>Popular Destinations</h2>
+    <h2>{homePopularDestinationsData?.title}</h2>
     <SwiperContent>
         <img src='/Barcelona.jpg'></img>
     </SwiperContent>
     </HomePopularDestinationsContent>
+    </section>
   )
 }
 

@@ -26,17 +26,19 @@ background: #151623;
         font-size: 1.5vw;
     }
 `
-const HomeFlightManager = () => {
+const HomeFlightManager = ({homeFlightManagerData}) => {
   return (
+    <section id='home-flight-manager'>
     <HomeFlightManagerContent>
         <ContentInner>
             <img src='/flightManager.jpg'/>
         </ContentInner>
         <ContentInner>
-        <h3>Flight Manager</h3>
-        <p>Lorem ipsum dolor sit amet. Ut accusantium eaque et velit tempore qui voluptatem temporibus qui expedita dignissimos ab optio molestiae. Et obcaecati blanditiis ut officiis reiciendis aut dolore dolores aut minima beatae in itaque quas et consequuntur sunt id minima quos. Est sequi odit aut enim omnis qui laborum deleniti ut harum distinctio.</p>
+        <h3>{homeFlightManagerData?.title}</h3>
+        <p>{homeFlightManagerData?.description}</p>
         </ContentInner>
     </HomeFlightManagerContent>
+    </section>
   )
 }
 
