@@ -6,7 +6,6 @@ import ComponentWebsiteBlocksHomeDestinations from './blocks/homepage/ComponentW
 import ComponentWebsiteBlocksHomeFlightManager from './blocks/homepage/ComponentWebsiteBlocksHomeFlightManager'
 import ComponentWebsiteBlocksHomeBookFlight from './blocks/homepage/ComponentWebsiteBlocksHomeBookFlight'
 const FullBlockRender = ({blocks}) => {
-    console.log(blocks ,"full block data")
     const getComponent = (block , index ) => {
         switch (block?.__typename) {
             //HOMEPAGE BLOCKS//

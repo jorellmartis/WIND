@@ -9,7 +9,6 @@ import HomeFlightManager from '../components/HomePage/HomeFlightManager'
 import HomeBookFlight from '../components/HomePage/HomeBookFlight'
 import FullBlockRender from '../components/FullBlockRenderer'
 export default function Home({homePageData}) {
-  console.log(homePageData,"home")
   return (
     <>
       <Head>
