@@ -1,12 +1,6 @@
 import Head from 'next/head'
 import apolloClient from '../helpers/apollo'
 import { GET_PARENT_PAGES } from '../queries/parentPages'
-import HomeBanner from '../components/HomePage/HomeBanner'
-import HomePage from '../components/HomePage/HomePage'
-import HomeFlexibleService from '../components/HomePage/HomeFlexibleService'
-import HomePopularDestinations from '../components/HomePage/HomePopularDestinations'
-import HomeFlightManager from '../components/HomePage/HomeFlightManager'
-import HomeBookFlight from '../components/HomePage/HomeBookFlight'
 import FullBlockRender from '../components/FullBlockRenderer'
 export default function Home({homePageData}) {
   return (
@@ -26,9 +20,11 @@ export const getStaticProps = async () => {
   try {
     const{ data } = await apolloClient.query({
       query:GET_PARENT_PAGES,
-      variables: 'homepage'
+      variables: {
+        slug: 'homepage',
+      },
     })
-    homePageData = data?.pagesSitemaps?.data[0].attributes.blocks
+    homePageData = data?.pagesSitemaps?.data[0]?.attributes?.blocks
   } catch (error) {
     console.log(error)
   }

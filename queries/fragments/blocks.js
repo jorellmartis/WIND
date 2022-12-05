@@ -46,3 +46,38 @@ export const ComponentWebsiteBlocksHomeBookFlight = `
 }
 `
 
+export const ComponentWebsiteBlocksPageBanner = `
+...on ComponentWebsiteBlocksPageBanner{
+    __typename
+    title
+    description
+    imgBanner{
+        ${imageFragment}
+    }
+}
+`
+
+export const ComponentWebsiteBlocksDestinationListing = `
+...on ComponentWebsiteBlocksDestinationListing{
+    __typename
+    title
+    destinationCard{
+        id
+        pages_destination{
+            data{
+                attributes{
+                    slug
+                    title
+                    description
+                    imgThumbnail{
+                        ${imageFragment}
+                    }
+                }
+            }
+        }
+    }
+
+}
+`
+
+

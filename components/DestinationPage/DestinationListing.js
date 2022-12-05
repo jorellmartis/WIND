@@ -14,16 +14,18 @@ text-align: center;
         font-size: 3em;
     }
 `
-const DestinationListing = () => {
+const DestinationListing = ({listingData}) => {
   return (
     <DestinationListingContent>
         <DestinationListingHeader>
-            <h2>Popular Destinations</h2>
+            <h2>{listingData?.title}</h2>
         </DestinationListingHeader>
-        <DestinationCard/>
-        <DestinationCard/>
-        <DestinationCard/>
-        <DestinationCard/>
+        {listingData?.destinationCard.map((destination,index) =>(
+          <DestinationCard
+          destinationData = {destination?.pages_destination?.data?.attributes}
+          key = {destination?.id}
+          />
+        ))}
     </DestinationListingContent>
   )
 }

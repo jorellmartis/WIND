@@ -5,6 +5,8 @@ import ComponentWebsiteBlocksHomeFlexibleService from './blocks/homepage/Compone
 import ComponentWebsiteBlocksHomeDestinations from './blocks/homepage/ComponentWebsiteBlocksHomeDestinations'
 import ComponentWebsiteBlocksHomeFlightManager from './blocks/homepage/ComponentWebsiteBlocksHomeFlightManager'
 import ComponentWebsiteBlocksHomeBookFlight from './blocks/homepage/ComponentWebsiteBlocksHomeBookFlight'
+import ComponentWebsiteBlocksPageBanner from './blocks/destination/ComponentWebsiteBlocksPageBanner'
+import ComponentWebsiteBlocksDestinationListing from './blocks/destination/ComponentWebsiteBlocksDestinationListing'
 const FullBlockRender = ({blocks}) => {
     const getComponent = (block , index ) => {
         switch (block?.__typename) {
@@ -41,6 +43,18 @@ const FullBlockRender = ({blocks}) => {
                     break;
             case "ComponentWebsiteBlocksHomeBookFlight":
                 return <ComponentWebsiteBlocksHomeBookFlight
+                    compBlockData={block}
+                    key = {`section-block-${index}`}
+                    />
+                    break;
+            case "ComponentWebsiteBlocksPageBanner":
+                return <ComponentWebsiteBlocksPageBanner
+                    compBlockData={block}
+                    key = {`section-block-${index}`}
+                    />
+                    break;
+            case "ComponentWebsiteBlocksDestinationListing":
+                return <ComponentWebsiteBlocksDestinationListing
                     compBlockData={block}
                     key = {`section-block-${index}`}
                     />

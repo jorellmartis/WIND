@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
+import { getStrapiMedia, getStrapiMediaText  } from '../../helpers/StrapiMedia'
 
 const PageBannerContent = styled.div`
 display: flex;
@@ -31,13 +32,15 @@ padding: 0%;
     }
 
 `
-const PageBanner = () => {
+const PageBanner = ({pageBannerData}) => {
   return (
+    <section id='page-banner'>
     <PageBannerContent>
-        <h1>Lorem Ipsum</h1>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Aliquet sagittis id consectetur purus ut faucibus. </p>    
-        <img src='/pageBannerDestination.jpg'/>
+        <h1>{pageBannerData?.title}</h1>
+        <p>{pageBannerData?.description}</p>    
+        <img src={getStrapiMedia(pageBannerData?.imgBanner)}/>
     </PageBannerContent>
+    </section>
   )
 }
 
