@@ -35,6 +35,7 @@ export const getStaticProps = async () => {
     console.log(error)
   }
   return{
+    revalidate: 60,
     props: {
       destinationPageData
     }
